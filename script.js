@@ -14,6 +14,11 @@ window.addEventListener('load', function() {
             this.collisionX = this.game.width * 0.5;
             this.collisionY = this.game.height * 0.5;
             this.collisionRadius = 50;
+            this.speedX = 0;
+            this.speedY = 0;
+            this.dx = 0;
+            this.dy = 0;
+            this.speedModifier = 20;
         }
 
         draw(context) {
@@ -24,6 +29,25 @@ window.addEventListener('load', function() {
             context.fill();
             context.restore();
             context.stroke();
+            context.beginPath();
+            context.moveTo(this.collisionX, this.collisionY);
+            context.lineTo(this.game.mouse.x, this.game.mouse.y);
+            context.stroke();
+        }
+
+        update() {
+            this.dx = this.game.mouse.x - this.collisionX;
+            this.dy = this.game.mouse.y - this.collisionY;
+            const distance = Math.hypot(this.dx, this.dy);
+            if (distance > this.speedModifier) {
+                this.speedX = this.dx / distance || 0;
+                this.speedY = this.dy / distance || 0;
+            } else {
+                this.speedX = 0;
+                this.speedY = 0;
+            }
+            this.collisionX += this.speedX * this.speedModifier;
+            this.collisionY += this.speedY * this.speedModifier;
         }
     }
 
@@ -54,23 +78,28 @@ window.addEventListener('load', function() {
             })
 
             canvas.addEventListener('mousemove', (e) => {
-                this.mouse.x = e.offsetX;
-                this.mouse.y = e.offsetY;
+                if (this.mouse.pressed) {
+                    this.mouse.x = e.offsetX;
+                    this.mouse.y = e.offsetY;
+                }
             })
         }
 
         render(context) {
             this.player.draw(context);
+            this.player.update();
         }
     }
 
 
     const game = new Game(canvas);
-    game.render(ctx);
-    console.log(game);
-
+    
     function animate() {
-
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        game.render(ctx);
+        requestAnimationFrame(animate);
     }
+
+    animate();
 
 })
