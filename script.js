@@ -14,12 +14,12 @@ window.addEventListener('load', function() {
             this.game = game;
             this.collisionX = this.game.width * 0.5;
             this.collisionY = this.game.height * 0.5;
-            this.collisionRadius = 50;
+            this.collisionRadius = 30;
             this.speedX = 0;
             this.speedY = 0;
             this.dx = 0;
             this.dy = 0;
-            this.speedModifier = 5;
+            this.speedModifier = 3;
             this.spriteWidth = 255;
             this.spriteHeight = 255;
             this.width = this.spriteWidth;
@@ -78,6 +78,20 @@ window.addEventListener('load', function() {
 
             this.spriteX = this.collisionX - this.width * 0.5;
             this.spriteY = this.collisionY - this.height * 0.5 - 100;
+
+            //horizontal boundaries
+            if (this.collisionX < this.collisionRadius) {
+                this.collisionX = this.collisionRadius;
+            } else if (this.collisionX > this.game.width - this.collisionRadius) {
+                this.collisionX = this.game.width - this.collisionRadius;
+            }
+
+            //vertical boundaries
+            if (this.collisionY < this.game.topMargin + this.collisionRadius) {
+                this.collisionY = this.game.topMargin + this.collisionRadius;
+            } else if (this.collisionY > this.game.height - this.collisionRadius) {
+                this.collisionY = this.game.height - this.collisionRadius;
+            }
 
             //collisions with obstacles
             this.game.obstacles.forEach(obstacle => {
@@ -212,7 +226,7 @@ window.addEventListener('load', function() {
                     }
                 });
 
-                const margin = testObstacle.collisionRadius * 2;
+                const margin = testObstacle.collisionRadius * 3;
 
                 if (!overlap && testObstacle.spriteX > 0 && testObstacle.spriteX < this.width - testObstacle.width
                     && testObstacle.collisionY > this.topMargin + margin && testObstacle.collisionY < this.height - margin ) {
