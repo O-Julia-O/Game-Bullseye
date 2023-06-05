@@ -1,6 +1,6 @@
 <h1>Game «Bullseye»</h1>
 
-<h3><a href="content"></a>📖 Table of contents</h3>
+<h3><a name="content"></a>📖 Table of contents</h3>
 <ul>
   <li><a href="#about">💻 About</a></li>
   <li><a href="#key-feachers">🔭 Key Features</a></li>
