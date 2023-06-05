@@ -33,13 +33,13 @@ The main goal is to save Lavres and help them to get into the forest.</p>
 <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
 </div>
 
-<h3><a href="#content">:video_camera: Video</a></h3>
+<h3><a href="#content">:video_camera: Video</a><a name="image"></a></h3>
 <div align="center">
   <a href="https://youtu.be/JkV1WNl87T4"><img width="700" src="https://github.com/O-Julia-O/Game-/assets/81177974/04e961be-3771-4f68-9c5a-a56918812811"/></a>
 </div>
 <div align="center"><a href="https://youtu.be/JkV1WNl87T4">Check video! 🎬</a></div>
 
-<h3><a href="#content">📜 Sourses</a><a href="sourses"></a></h3>
+<h3><a href="#content">📜 Sourses</a><a name="sourses"></a></h3>
 
 <b>Teacher's youtube channel:</b> <b><a href="https://youtu.be/f_4KTiKWIqA">:technologist: Franks laboratory</a></b>
 <br>
