@@ -35,7 +35,7 @@ The main goal is to save Lavres and help them to get into the forest.</p>
 
 <h3><a href="#content">:video_camera: Video</a><a name="image"></a></h3>
 <div align="center">
-  <a href="https://youtu.be/JkV1WNl87T4"><img width="700" src="https://github.com/O-Julia-O/Game-/assets/81177974/04e961be-3771-4f68-9c5a-a56918812811"/></a>
+  <a href="https://youtu.be/JkV1WNl87T4"><img width="700" src="https://github.com/O-Julia-O/Game-Bullseye/assets/81177974/89094ba9-ba56-4043-9f88-24801037960e"/></a>
 </div>
 <div align="center"><a href="https://youtu.be/JkV1WNl87T4">Check video! 🎬</a></div>
 
