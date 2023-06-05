@@ -39,7 +39,7 @@ The main goal is to save Lavres and help them to get into the forest.</p>
 </div>
 <div align="center"><a href="https://youtu.be/JkV1WNl87T4">Check video! 🎬</a></div>
 
-<h3><a href="#content">Sourses</a><a href="sourses"></a></h3>
+<h3><a href="#content">📜 Sourses</a><a href="sourses"></a></h3>
 
 <b>Teacher's youtube channel:</b> <b><a href="https://youtu.be/f_4KTiKWIqA">:technologist: Franks laboratory</a></b>
 <br>
